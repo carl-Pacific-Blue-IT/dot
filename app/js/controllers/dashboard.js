@@ -5,7 +5,7 @@
     app.config(function(ChartJsProvider) {
         // Configure all charts
         ChartJsProvider.setOptions({
-            colours: ['#FF6E40', '#FBC02E', '#673AB7', '#66bd78', '#f05050'],
+            colours: ['#ff0000', '#FBC02E', '#673AB7', '#66bd78', '#f05050'],
             responsive: true
         });
         // Configure all doughnut charts
@@ -32,16 +32,16 @@
             }
         };
         $scope.colours = [{ // grey
-                fillColor: "rgba(255,110,64,1)",
-                strokeColor: "rgba(255,110,64,1)",
-                pointColor: "rgba(255,110,64,1)",
+                fillColor: "#54bc97",
+                strokeColor: "#00797c",
+                pointColor: "#00797c",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(255,110,64,1)"
         }, { // dark grey
-                fillColor: "rgba(103,58,183,1)",
-                strokeColor: "rgba(103,58,183,1.0)",
-                pointColor: "rgba(103,58,183,1.0)",
+                fillColor: "#00797c",
+                strokeColor: "#005c5e",
+                pointColor: "#005c5e",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(103,58,183,1.0)"
@@ -75,16 +75,20 @@
             [7, 13, 8, 10, 18, 11, 17, 9, 17]
         ];
         $scope.colours = [{ // grey
-                fillColor: "rgba(255,110,64,1)",
-                strokeColor: "rgba(255,110,64,1)",
-                highlightFill: "rgba(255,110,64,1)",
-                highlightStroke: "rgba(255,110,64,1)"
-        }, { // dark grey
-                fillColor: "rgba(103,58,183,1.0)",
-                strokeColor: "rgba(103,58,183,1)",
-                highlightFill: "rgba(103,58,183,1)",
-                highlightStroke: "rgba(103,58,183,1.0)"
-        }];
+            fillColor: "#54bc97",
+            strokeColor: "#00797c",
+            pointColor: "#00797c",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(255,110,64,1)"
+    }, { // dark grey
+            fillColor: "#00797c",
+            strokeColor: "#005c5e",
+            pointColor: "#005c5e",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(103,58,183,1.0)"
+    }];
 
          $scope.options = {
                 scaleShowVerticalLines: false,
@@ -163,16 +167,16 @@
             console.log(points, evt);
         };
         $scope.colours = [{ // grey
-                fillColor: "rgba(255,110,64,0.9)",
-                strokeColor: "rgba(255,110,64,1)",
-                pointColor: "rgba(255,110,64,1)",
+                fillColor: "#54bc97",
+                strokeColor: "#54bc97",
+                pointColor: "#54bc97",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(255,110,64,1)"
         }, { // dark grey
-                fillColor: "rgba(103,58,183,0.9)",
-                strokeColor: "rgba(103,58,183,1.0)",
-                pointColor: "rgba(103,58,183,1.0)",
+                fillColor: "#00797c",
+                strokeColor: "#00797c",
+                pointColor: "#00797c",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(103,58,183,1.0)"

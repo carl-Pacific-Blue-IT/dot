@@ -73,7 +73,7 @@
                                     <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-options="options" chart-colours="colours" style="width: 100% !important;height: 230px"></canvas>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 padding-right-0 {{chartjs.show == 'line' ? 'showit': 'hideit'}}" ng-controller="DashboardLineCtrl" style="overflow:hidden;">
-                                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-options="options" chart-legend="false" chart-series="series" chart-click="onClick" chart-colours="colours" style="width: 100% !important;height: 230px">
+                                    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-options="options" chart-legend="false" chart-series="series" chart-click="onClick" chart-colours="colours" style="width: 100% !important;height: 230px;">
                                     </canvas>
                                 </div>
                                 <!-- <div class="col-md-12 col-sm-12 col-xs-12 {{chartjs.show == 'radar' ? 'showit': 'hideit'}}" ng-controller="DashboardRadarCtrl">
@@ -126,7 +126,7 @@
                         <div class="r1_maingraph db_box" ng-init="chartjs={show:'line'}">
                             <div class='graph-wrapper'>
                                 <div ng-controller="DashboardPolarAreaCtrl">
-                                    <canvas id="polar-area" class="chart chart-polar-area" chart-data="data" chart-options="options" chart-labels="labels" chart-colours="colours"></canvas>
+                                    <canvas id="polar-area" class="chart chart-polar-area" chart-data="data" chart-options="options" chart-labels="labels" chart-colours=""></canvas>
                                 </div>
                             </div>
                         </div>
@@ -174,14 +174,14 @@
                         },
                         regionStyle: {
                             initial: {
-                                fill: '#FF6E40',
+                                fill: '#54bc97',
                                 'fill-opacity': 0.8,
-                                stroke: '#FF6E40',
+                                stroke: '#54bc97',
                                 'stroke-width': 0,
                                 'stroke-opacity': 0
                             },
                             hover: {
-                                fill: '{{app.color.accent}}',
+                                fill: '#00797c',
                                 'fill-opacity': 1,
                                 cursor: 'pointer'
                             },
@@ -192,8 +192,8 @@
                         },
                         markerStyle: {
                             initial: {
-                                fill: '#673AB7',
-                                stroke: '#673AB7',
+                                fill: '#00797c',
+                                stroke: '#00797c',
                                 r: 6
                             },
                             hover: {
@@ -256,7 +256,7 @@
                             <div class="col-lg-6 col-xs-12 col-sm-12 col-md-6">
                                 <div ui-jq="easyPieChart" ui-options="{
                       easing: 'easeOutBounce',
-                      barColor: '{{app.color.primary}}',
+                      barColor: '#54bc97',
                       trackColor: '#f5f5f5',
                       scaleColor: '#eaeaea',
                       lineCap: 'square',
@@ -274,7 +274,7 @@
                             <div class="col-lg-6 col-xs-12 col-sm-12 col-md-6">
                                 <div ui-jq="easyPieChart" ui-options="{
                       easing: 'easeOutBounce',
-                      barColor: '{{app.color.accent}}',
+                      barColor: '#00797c',
                       trackColor: '#f5f5f5',
                       scaleColor: '#eaeaea',
                       lineCap: 'square',
