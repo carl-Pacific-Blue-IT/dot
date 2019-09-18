@@ -9,7 +9,7 @@ angular.module('app')
             function($stateProvider, $urlRouterProvider, JQ_CONFIG) {
 
                 $urlRouterProvider
-                    .otherwise('/app/dashboard');
+                    .otherwise('/access/login');
                 $stateProvider
 
                     .state('app', {
@@ -17,6 +17,18 @@ angular.module('app')
                         url: '/app',
                         templateUrl: 'partials/app.html'
                     })
+                    // .state('access.login', {
+                    //     url: '/login',
+                    //     templateUrl: 'partials/ui-login.html',
+                    //     resolve: {
+                    //         deps: ['uiLoad',
+                    //             function(uiLoad) {
+                    //                 return uiLoad.load(['js/controllers/login.js',
+                    //                     '../bower_components/font-awesome/css/font-awesome.css']);
+                    //             }
+                    //         ]
+                    //     }
+                    // })
                     .state('app.dashboard', {
                         url: '/dashboard',
                         templateUrl: 'partials/app_dashboard.html',
