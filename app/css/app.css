@@ -2990,7 +2990,8 @@ slider span.pointer.active:after {
 .btn-danger:hover,
 .btn-danger:active,
 .btn-danger:focus {
-    background: #E53935;
+    /* background: #E53935; */
+    background: #54bc97;
     color: #ffffff;
 }
 

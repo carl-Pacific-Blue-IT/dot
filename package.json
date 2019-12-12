@@ -5,11 +5,30 @@
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server -o"
   },
-  "keywords": [    "AngularJS", "admin", "widgets", "admin panel", "flat ui", "ui", "web app", "app", "backend", "angular", "dashboard", "bootstrap", "charts", "ui kit", "responsive"  ],
+  "keywords": [
+    "AngularJS",
+    "admin",
+    "widgets",
+    "admin panel",
+    "flat ui",
+    "ui",
+    "web app",
+    "app",
+    "backend",
+    "angular",
+    "dashboard",
+    "bootstrap",
+    "charts",
+    "ui kit",
+    "responsive"
+  ],
   "repository": "https://themepassion@bitbucket.org/themepassion/build.it.git",
   "author": "themepassion",
   "license": "UNLICENSED",
-  "dependencies": {},
+  "dependencies": {
+    "@angular/fire": "^5.2.3",
+    "firebase": "^7.5.2"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bower-install-simple": "^0.9.3",

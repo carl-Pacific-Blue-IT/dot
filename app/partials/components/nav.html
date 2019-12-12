@@ -1,12 +1,122 @@
 <!-- list -->
 <ul class="wraplist wrapper-menu">
    
-    <li ui-sref-active="active">
+    <!-- <li ui-sref-active="active">
         <a ui-sref="app.dashboard" class="nosub">
             <i class="material-icons">dashboard</i>
             <span class="title">Dashboard</span>
         </a>
-    </li>
+    </li> -->
+
+                        <!-- <li href class="auto"> 
+                            <a href="javascript:;">
+                                <i class="material-icons">map</i>
+                                <span class="title">Maps</span>
+                                <span class="arrow material-icons">keyboard_arrow_right</span>
+                            </a>
+                            <ul class="wraplist wraplist-sub sub-menu dk" >
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.vectormaps">Vector</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.googlemapfull">Google</a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+                        <li ui-sref-active="auto">
+                            <a ui-sref="app.ui.googlemapfull" class="nosub">
+                                <i class="material-icons">map</i>
+                                <span class="title">Map</span>
+                            </a>
+                        </li>
+
+                        <li ui-sref-active="auto">
+                            <a ui-sref="app.ui.timeline" class="nosub">
+                                <i class="material-icons">contacts</i>
+                                <span class="title">Timeline</span>
+                            </a>
+                        </li>
+
+                        <!-- <li href class="auto"> 
+                            <a href="javascript:;">
+                                <i class="material-icons">filter_list</i>
+                                <span class="title">Filtering</span>
+                                <span class="arrow material-icons">keyboard_arrow_right</span>
+                            </a>
+                            <ul class="wraplist wraplist-sub sub-menu dk" >
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Investment</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.searchr">Resort</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Hotels</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Restaurants</a>
+                                </li>
+                                <li class='subgroup'><span>Type</span></li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Price</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Range</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="app.ui.search">Class/Accreditation Level</a>
+                                </li>
+
+                            </ul>
+                        </li> -->
+
+                        <li ui-sref-active="auto">
+                            <a ui-sref="app.ui.search" class="nosub">
+                                <i class="material-icons">filter_list</i>
+                                <span class="title">Filtering</span>
+                            </a>
+                        </li>
+
+                        <!-- <li href class="auto"> 
+                            <a href="javascript:;">
+                                <i class="material-icons">filter_list</i>
+                                <span class="title">Filtering</span>
+                                <span class="arrow material-icons">keyboard_arrow_right</span>
+                            </a>
+                            <ul class="wraplist wraplist-sub sub-menu dk" >
+                                <li ui-sref-active="active">
+                                    <a>Level 1.1<span class="arrow material-icons">keyboard_arrow_right</span></a>
+                                    <ul class="wraplist wraplist-sub sub-menu dk" >
+                                        <li ui-sref-active="active">
+                                            <a>Level 2.1</a>
+                                        </li>
+                                        <li ui-sref-active="active">
+                                            <a>Level 2.2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a>Level 1.2</a>
+                                </li>
+                                
+                            </ul>
+                        </li> -->
+
+                        <li ui-sref-active="auto">
+                            <a ui-sref="app.dashboard" class="nosub">
+                                <i class="material-icons">book</i>
+                                <span class="title">Booking</span>
+                            </a>
+                        </li>
+
+                        <li ui-sref-active="auto">
+                            <a ui-sref="app.dashboard" class="nosub">
+                                <i class="material-icons">dashboard</i>
+                                <span class="title">ACL</span>
+                            </a>
+                        </li>
+
 
                         <li href class="auto"> 
                             <a href="javascript:;">
@@ -29,6 +139,7 @@
                         </li>
 
 
+                        
 
 
 
@@ -298,46 +409,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li href class="auto"> 
-                            <a href="javascript:;">
-                                <i class="material-icons">map</i>
-                                <span class="title">Maps</span>
-                                <span class="arrow material-icons">keyboard_arrow_right</span>
-                            </a>
-                            <ul class="wraplist wraplist-sub sub-menu dk" >
-                                <li ui-sref-active="active">
-                                    <a ui-sref="app.ui.vectormaps">Vector</a>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a ui-sref="app.ui.googlemapfull">Google</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li href class="auto"> 
-                            <a href="javascript:;">
-                                <i class="material-icons">filter_list</i>
-                                <span class="title">Menu Levels</span>
-                                <span class="arrow material-icons">keyboard_arrow_right</span>
-                            </a>
-                            <ul class="wraplist wraplist-sub sub-menu dk" >
-                                <li ui-sref-active="active">
-                                    <a>Level 1.1<span class="arrow material-icons">keyboard_arrow_right</span></a>
-                                    <ul class="wraplist wraplist-sub sub-menu dk" >
-                                        <li ui-sref-active="active">
-                                            <a>Level 2.1</a>
-                                        </li>
-                                        <li ui-sref-active="active">
-                                            <a>Level 2.2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li ui-sref-active="active">
-                                    <a>Level 1.2</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
+                        
 
 
 
