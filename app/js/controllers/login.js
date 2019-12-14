@@ -24,12 +24,6 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
     $scope.login2 = function() {
 
       var ref = firebase.database().ref("users");
-
-      function newLoginHappened(user){
-        if(user){
-          console.log("Signed in");
-          app(user);
-        } else {
           console.log("Signing in");
           var provider = new firebase.auth.GoogleAuthProvider();
           firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -39,34 +33,34 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
         var user = result.user;
         // ...
 
-        var userId = user.uid;
-          //Create a user profile in the DB
-          ref.once("value")
-            .then(function (snapshot){
-              //check if exist
-              var r = snapshot.child(userId).exists();
-              if(r !== true){
-                ref.child(userId).set({
-                  username: user.displayName,
-                  photoURL: user.photoURL
-                })
-                
-              }
-              return;
-            });
+        var userDelete = firebase.auth().currentUser;
 
-      })
+        ref.orderByChild("email").equalTo(user.email).once("value")
+      .then (function(snapshot) {
+
+        //Check if email is already exist in real time database
+        var exist = snapshot.exists();
+        if (!exist){
+          console.log("Don't Exists!");
+          console.log("There is no user record corresponding to this identifier. The user may have been deleted.");
+          $scope.authError = 'There is no user record corresponding to this identifier. The user may have been deleted.';
+          user.delete().then(function() {
+            // User deleted.
+            console.log('Successfully deleted user');
+          }).catch(function(error) {
+            // An error happened.
+            console.log('Error deleting user:', error);
+          });
+        } else {
+          app(user);
+          console.log("Signed in");
         }
-      }
-
-      firebase.auth().onAuthStateChanged(newLoginHappened);
-
-      
+      });
+      })
     };
 
     function app(user){
       $state.go('app.ui.googlemapfull');
-      console.log("Logged in");
     }
   }])
 ;

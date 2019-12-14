@@ -5,7 +5,7 @@
 
         <form name="form" class="form-validation">
     
-          <div class="text-danger text-center message" ng-show="authError">
+          <div class="text-danger wrapper text-center" ng-show="authError">
               {{authError}}
           </div>
 
@@ -28,16 +28,22 @@
             <p class="submit">
             <button type="submit" ng-click="login()" ng-disabled='form.$invalid' class="btn btn-accent btn-block">Sign In</button>
             </p>
-        </form>
 
+                
+        </form>
+        
+            
+            <button type="submit" ng-click="login2()" class="btn btn-info btn-block">
+                <i class="fa fa-google"> Sign In with Google</i></button>
+
+            <br>
         <p id="nav">
             <a class="pull-left" ui-sref="access.forgotpwd" title="Password Lost and Found">Forgot password?</a>
             <a class="pull-right" ui-sref="access.register" title="Sign Up">Sign Up</a>
         </p>
 
-        <br><br>
-        <button type="submit" ng-click="login2()" class="btn btn-danger btn-block">
-                <i class="fa fa-google"> Sign In with Google</i></button>
+        
+        
 
 
     </div>

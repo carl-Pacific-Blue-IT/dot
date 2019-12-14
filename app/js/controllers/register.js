@@ -57,7 +57,13 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
         var user = result.user;
         // ...
 
-        $state.go('app.ui.googlemapfull');
+        ref.orderByChild("email").equalTo(user.email).once("value")
+      .then (function(snapshot) {
+
+        //Check if email is already exist in real time database
+        var exist = snapshot.exists();
+        if (!exist){
+           $state.go('app.ui.googlemapfull');
 
         var userId = user.uid;
           //Create a user profile in the DB
@@ -68,16 +74,19 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
               if(r !== true){
                 ref.child(userId).set({
                   username: user.displayName,
-                  photoURL: user.photoURL
+                  photoURL: user.photoURL,
+                  email: user.email
                 })
                 
               }
               return;
             });
-
-      })
-
-      
+        } else {
+          $scope.authError = 'The email address is already in use by another account.';
+          console.log('The email address is already in use by another account.');
+        }
+      });
+      }) 
     };
 
     function app(user){
