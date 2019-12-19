@@ -56,7 +56,10 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
           console.log("Signed in");
         }
       });
-      })
+      }) .catch(function(error){
+        $scope.authError = true;
+        $scope.authError = error.message;
+      });
     };
 
     function app(user){

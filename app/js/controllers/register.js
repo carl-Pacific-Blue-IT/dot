@@ -16,7 +16,7 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
         var exist = snapshot.exists();
         if (!exist){
           $firebaseArray(ref).$add({
-            name: $scope.user.fullname,
+            username: $scope.user.name,
             email: $scope.user.email
           })
           .then(function(ref){
