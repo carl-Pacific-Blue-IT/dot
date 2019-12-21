@@ -1,7 +1,7 @@
 <!-- START TOPBAR -->
 <div class='logo-area'>
 </div>
-<div class='quick-area'>
+<div class='quick-area' ng-controller="NotificationsDropDownCtrl">
     <div class='pull-left slantit'>
         <ul class="info-menu left-links list-inline list-unstyled">
             <li class="sidebar-toggle-wrap">
@@ -150,9 +150,9 @@
                             <i class="material-icons">help</i> Help
                         </a>
                     </li>
-                    <li class="last">
-                        <a ui-sref="access.login">
-                            <i class="material-icons">lock</i> Logout
+                    <li ng-click="logout()">
+                        <a href="#">
+                            <i class="material-icons" >lock</i> Logout
                         </a>
                     </li>
                 </ul>
