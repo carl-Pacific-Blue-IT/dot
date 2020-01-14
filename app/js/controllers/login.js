@@ -65,5 +65,25 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
     function app(user){
       $state.go('app.ui.googlemapfull');
     }
+
+
+
+    $scope.reset = function() {
+      
+      var resetEmail = $scope.user.resetEmail;
+      var auth = $firebaseAuth();
+      var auth2 = firebase.auth();
+
+      if(resetEmail != ""){
+        auth2.sendPasswordResetEmail(resetEmail).then(function(){
+             $scope.user.resetEmail = "";
+            $scope.authError = 'A reset link sent to your email address. It will expire after 2 hours.';
+        })
+        .catch(function(error){
+            $scope.authError = true;
+             $scope.authError = error.message;
+        });
+      }
+    };
   }])
 ;

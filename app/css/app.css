@@ -3527,7 +3527,7 @@ fieldset[disabled] .btn {
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: #9E9E9Escale;
+    -moz-osx-font-smoothing: #9E9E9E scale;
 }
 
 .icon-chevron-up:before {
