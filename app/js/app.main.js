@@ -1,6 +1,19 @@
 'use strict';
-angular.module('app').controller('AppCtrl', ['$scope',
-    function($scope) {
+angular.module('app').controller('AppCtrl', ['$scope','$state',
+    function($scope,$state) {
+       
+        setInterval(function(){
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+
+                console.log(user);
+
+                } else {
+                $state.go('access.login')
+                }
+            });
+            console.log('123...')
+        }, 1000 );
 
         var menufold = false; 
         var screenWidth = window.innerWidth;

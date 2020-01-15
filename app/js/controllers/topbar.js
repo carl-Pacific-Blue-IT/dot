@@ -23,4 +23,6 @@ app.controller('NotificationsDropDownCtrl', ['$firebaseAuth', '$scope', '$http',
         console.log(error);
       });
     }
+
+    
   }]);
