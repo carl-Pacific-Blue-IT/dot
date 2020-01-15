@@ -1,8 +1,10 @@
 'use strict';
 angular.module('app').controller('AppCtrl', ['$scope','$state',
     function($scope,$state) {
+
+        var timerId = setInterval(myVar, 500);
        
-        setInterval(function(){
+        function myVar(){
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
 
@@ -13,7 +15,9 @@ angular.module('app').controller('AppCtrl', ['$scope','$state',
                 }
             });
             console.log('123...')
-        }, 1000 );
+        }
+
+        setTimeout(() => { clearInterval(timerId); }, 1000);
 
         var menufold = false; 
         var screenWidth = window.innerWidth;

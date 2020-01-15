@@ -9,12 +9,24 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
       var username = $scope.user.email;
       var password = $scope.user.password;
       var auth = $firebaseAuth();
+      
+
       // Try to login
       auth.$signInWithEmailAndPassword(username, password)
       .then(function() {
-        $state.go('app.ui.googlemapfull');
-        $scope.authError = false;
-        console.log('User Login Succesful');
+
+        var user = firebase.auth().currentUser;
+
+        if(user.emailVerified){
+           $state.go('app.ui.googlemapfull');
+          $scope.authError = false;
+          console.log('User Login Succesful');
+        } else {
+          $scope.authError = true;
+          $scope.authError = 'You need to verify first your email.';
+        }
+
+       
       }) .catch(function(error){
         $scope.authError = true;
         $scope.authError = error.message;
@@ -34,6 +46,8 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
         // ...
 
         var userDelete = firebase.auth().currentUser;
+
+        
 
         ref.orderByChild("email").equalTo(user.email).once("value")
       .then (function(snapshot) {
