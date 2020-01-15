@@ -22,7 +22,7 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
           .then(function(ref){
             console.log('Added to database');
             
-            $scope.user.fullname = "";
+            $scope.user.name = "";
             $scope.user.email = "";
             $scope.user.password = ""; 
           });
@@ -33,8 +33,19 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
           var auth = $firebaseAuth();
           auth.$createUserWithEmailAndPassword(email, password)
           .then(function(){
-            $state.go('access.login');
+            var user = firebase.auth().currentUser;
+
+            user.sendEmailVerification().then(function(){
+                $scope.authError = 'Verification sent to your email. After that you can now log in';
+                console.log('Verification sent to your email. After that you can now log in');
+            }) 
+           .catch(function(error){
+            $scope.authError = error.message;
+            });
+
+            //$state.go('access.login');
             console.log("User Authenticated");
+            //$scope.authError = 'Verification sent';
           }).catch(function(error){
               $scope.authError = error.message;
            
