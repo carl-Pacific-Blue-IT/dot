@@ -2,22 +2,25 @@
 angular.module('app').controller('AppCtrl', ['$scope','$state',
     function($scope,$state) {
 
-        var timerId = setInterval(myVar, 500);
+        var timerId = setInterval(myVar, 1000);
        
         function myVar(){
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
+                    //console.log('123');
 
-                console.log(user);
+                    console.log(timerId);
 
                 } else {
-                $state.go('access.login')
+                $state.go('access.login');
+                    
+                clearInterval(timerId);
                 }
             });
-            console.log('123...')
+            //console.log('123...')
         }
 
-        setTimeout(() => { clearInterval(timerId); }, 1000);
+        //setTimeout(() => { clearInterval(timerId); }, 1000);
 
         var menufold = false; 
         var screenWidth = window.innerWidth;

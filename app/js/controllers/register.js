@@ -36,15 +36,23 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
             var user = firebase.auth().currentUser;
 
             user.sendEmailVerification().then(function(){
-                $scope.authError = 'Verification sent to your email. After that you can now log in';
-                console.log('Verification sent to your email. After that you can now log in');
+                //$scope.authError = 'Verification sent to your email.';
+                console.log('Verification sent to your email.');
             }) 
            .catch(function(error){
             $scope.authError = error.message;
             });
 
-            //$state.go('access.login');
+            $scope.authError = 'Verification sent to your email. Confirm first before logging in';
+
+            var delay = 10000;
+
+            setTimeout(function(){
+              $state.go('access.login');
             console.log("User Authenticated");
+            }, delay);
+
+            
             //$scope.authError = 'Verification sent';
           }).catch(function(error){
               $scope.authError = error.message;
@@ -74,7 +82,26 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
         //Check if email is already exist in real time database
         var exist = snapshot.exists();
         if (!exist){
-           $state.go('app.ui.googlemapfull');
+           //$state.go('app.ui.googlemapfull');
+           var user = firebase.auth().currentUser;
+
+            user.sendEmailVerification().then(function(){
+                //$scope.authError = 'Verification sent to your email.';
+                console.log('Verification sent to your email.');
+            }) 
+           .catch(function(error){
+            $scope.authError = error.message;
+            });
+
+            $scope.authError = 'Verification sent to your email. Confirm first before logging in';
+            alert('Verification sent to your email. Confirm first before logging in');
+
+            var delay = 10000;
+
+            setTimeout(function(){
+              $state.go('access.login');
+            console.log("User Authenticated");
+            }, delay);
 
         var userId = user.uid;
           //Create a user profile in the DB
@@ -91,12 +118,15 @@ app.controller('RegisterFormController', ['$firebaseAuth', '$firebaseArray', '$s
                 
               }
               return;
+              
             });
         } else {
           $scope.authError = 'The email address is already in use by another account.';
           console.log('The email address is already in use by another account.');
         }
       });
+
+      
       }) 
     };
 

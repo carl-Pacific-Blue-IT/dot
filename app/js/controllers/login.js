@@ -19,7 +19,6 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
 
         if(user.emailVerified){
            $state.go('app.ui.googlemapfull');
-          $scope.authError = false;
           console.log('User Login Succesful');
         } else {
           $scope.authError = true;
@@ -66,8 +65,20 @@ app.controller('LoginFormController', ['$firebaseAuth', '$firebaseArray', '$scop
             console.log('Error deleting user:', error);
           });
         } else {
-          app(user);
+
+          var user = firebase.auth().currentUser;
+
+          if(user.emailVerified){
+            app(user);
           console.log("Signed in");
+            //$state.go('app.ui.googlemapfull');
+           //console.log('User Login Succesful');
+         } else {
+           $scope.authError = true;
+           $scope.authError = 'You need to verify first your email.';
+         }
+ 
+          
         }
       });
       }) .catch(function(error){

@@ -17,7 +17,14 @@ app.controller('NotificationsDropDownCtrl', ['$firebaseAuth', '$scope', '$http',
       auth.$signOut().then(function() {
         // Sign-out successful.
         console.log("Logged Out Successfully");
+        localStorage.clear();
+        sessionStorage.clear();
         $state.go('access.login');
+
+        var delay = 1000;
+            setTimeout(function(){
+              window.location.reload();
+            }, delay);
       }).catch(function(error) {
         // An error happened.
         console.log(error);
