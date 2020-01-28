@@ -9,6 +9,25 @@ app.controller('MapCtrl', ['$scope', function ($scope) {
     $scope.mapOptions = {
       center: new google.maps.LatLng(13.134559308347992, 123.76448392868042),
       zoom: 15,
+      styles: [
+        {
+          "featureType": "poi.business",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        }
+      ],
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 

@@ -73,7 +73,7 @@ var loadGoogleMaps = (function($) {
 			$.ajax({
 				dataType: 'script',
 				data: params,
-				url: 'http://maps.google.com/maps/api/js?key=AIzaSyDENyuxiDy6R45RVnr6jhPqGM3o5cUDS1k&callback=initMap'				
+				url: 'https://maps.google.com/maps/api/js?key=AIzaSyDENyuxiDy6R45RVnr6jhPqGM3o5cUDS1k&callback=initMap'				
 			});
 			
 		}

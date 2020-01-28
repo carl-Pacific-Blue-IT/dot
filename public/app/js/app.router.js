@@ -42,7 +42,7 @@ angular.module('app')
                                         )
                                         .then(
                                           function(){
-                                               return $ocLazyLoad.load('../bower_components/font-awesome/css/font-awesome.css');
+                                               return $ocLazyLoad.load('css/font-awesome/css/font-awesome.css');
                                             }
                                           )/*.then(
                                           function(){
@@ -65,7 +65,7 @@ angular.module('app')
                                         'js/controllers/vectormap.js', 
                                         'js/directives/ui-todowidget.js', 
                                         'js/controllers/messages-widget.js',
-                                        '../bower_components/font-awesome/css/font-awesome.css'
+                                        'css/font-awesome/css/font-awesome.css'
                                     ]);
                                 }
                             ]
@@ -86,7 +86,7 @@ angular.module('app')
                             deps: ['uiLoad',
                                 function(uiLoad) {
                                     return uiLoad.load(['js/controllers/login.js',
-                                        '../bower_components/font-awesome/css/font-awesome.css']);
+                                        'css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -97,7 +97,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['js/controllers/register.js','../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['js/controllers/register.js','css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -133,7 +133,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -156,7 +156,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -172,7 +172,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -222,7 +222,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }                        
@@ -251,7 +251,7 @@ angular.module('app')
                                         }
                                     ).then(
                                         function() {
-                                            return $ocLazyLoad.load('../bower_components/font-awesome/css/font-awesome.css');
+                                            return $ocLazyLoad.load('css/font-awesome/css/font-awesome.css');
                                         }
                                     );
                                 }
@@ -269,7 +269,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -280,7 +280,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -297,7 +297,7 @@ angular.module('app')
                                         }
                                     ).then(
                                         function() {
-                                            return $ocLazyLoad.load('../bower_components/font-awesome/css/font-awesome.css');
+                                            return $ocLazyLoad.load('css/font-awesome/css/font-awesome.css');
                                         }
                                     );
                                 }
@@ -310,7 +310,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -379,7 +379,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -427,7 +427,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -446,7 +446,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['js/controllers/members.js', '../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load(['js/controllers/members.js', 'css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -458,7 +458,7 @@ angular.module('app')
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
-                                    return $ocLazyLoad.load(['js/filters/search-startfrom.js', 'js/controllers/search.js', 'js/directives/ui-searchtabs.js','../bower_components/font-awesome/css/font-awesome.css']);
+                                    return $ocLazyLoad.load(['js/filters/search-startfrom.js', 'js/controllers/search.js', 'js/directives/ui-searchtabs.js','css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -470,7 +470,7 @@ angular.module('app')
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
-                                    return $ocLazyLoad.load(['js/filters/blogs-startfrom.js', 'js/controllers/blogs.js','../bower_components/font-awesome/css/font-awesome.css']);
+                                    return $ocLazyLoad.load(['js/filters/blogs-startfrom.js', 'js/controllers/blogs.js','css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -481,7 +481,7 @@ angular.module('app')
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
-                                    return $ocLazyLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                                    return $ocLazyLoad.load(['css/font-awesome/css/font-awesome.css']);
                                 }
                             ]
                         }
@@ -521,7 +521,7 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css', 'js/controllers/mail.js',
+                                    return uiLoad.load(['css/font-awesome/css/font-awesome.css', 'js/controllers/mail.js',
                                         'js/services/mail-service.js',
                                         JQ_CONFIG.moment
                                     ]);
@@ -603,7 +603,7 @@ angular.module('app')
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
-                                    return $ocLazyLoad.load(['../bower_components/d3/d3.min.js', 'angular-rickshaw'], {
+                                    return $ocLazyLoad.load(['css/d3/d3.min.js', 'angular-rickshaw'], {
                                         serie: true
                                     }).then(
                                         function() {
